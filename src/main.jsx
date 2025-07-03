@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import About from "./components/About.jsx";
 import Contact from "./components/Contact.jsx";
 import Home from "./components/Home.jsx";
+import User from "./components/User.jsx";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,18 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />,
+      },
+      {
+        path: "user",
+        element: <User />,
+      },
+      {
+        path: "user/:id",
+        element: <User />,
+      },
+      {
+        path: "*",
+        element: <h1>404 not found</h1>,
       },
     ],
   },
